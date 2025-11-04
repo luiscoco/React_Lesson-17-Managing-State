@@ -1,0 +1,96 @@
+
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(1200px 600px at 20% 0%, #1e293b 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  letter-spacing: 0.4px;
+}
+
+.section {
+  background: linear-gradient(180deg, #0b1220, var(--panel));
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+input, textarea {
+  background: #0b1020;
+  color: var(--text);
+  border: 1px solid #1f2937;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+}
+
+input::placeholder, textarea::placeholder { color: var(--muted); }
+
+button {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .08s ease, background .15s ease;
+}
+
+button:hover { transform: translateY(-1px); }
+button:active { transform: translateY(0); }
+
+button.primary { background: #0b1830; border-color: #1f2f57; }
+button.danger { border-color: #3b1f27; color: #fecaca; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+
+.stack { display: grid; gap: 12px; }
+.row { display: flex; gap: 10px; align-items: center; }
+.grow { flex: 1; }
+
+ul.reset { list-style: none; padding: 0; margin: 0; }
+li.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  background: #0b1220;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.small { font-size: 12px; color: var(--muted); }
